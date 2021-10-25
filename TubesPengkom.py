@@ -29,7 +29,7 @@ arrData = [['*' for j in range(4)]]
 if(opsiMenu == 1):
     n = int(input("\nJumlah data yang akan dimasukkan: "))
 
-    for i in range(n):
+    for i in range(n-1):
         arrData += [['*' for j in range(4)]]
 
     for i in range(n):
@@ -46,10 +46,9 @@ if(opsiMenu == 1):
         else:
             tglVaksin = "Belum vaksin"
 
-        tambahData(arrData, i, nama, nim, status, tglVaksin)
+        tambahData(arrData, jmlhData, nama, nim, status, tglVaksin)
 
-        jmlhData += n
+        jmlhData += 1
 
-else:
-    for i
+
 print(arrData)

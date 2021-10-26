@@ -5,6 +5,8 @@
 
 
 #Subprogram
+from fungsi_dasar import * # Import fungsi dasar buatan sendiri, dari file fungsi_dasar.py
+
 def tambahData(arrData, index, nama, nim, status, tglVaksin):
     arrData[index][0] = nama
     arrData[index][1] = nim

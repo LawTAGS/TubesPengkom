@@ -2,7 +2,10 @@
 # 1. len (udah)
 # 2. append (udah)
 # 3. remove (udah)
-# 4. pop
+# 4. startswith ()
+
+def startswith(string_yang_dicek, karakter_yang_dicek):
+    return True if string_yang_dicek[0] == karakter_yang_dicek else False
 
 def length(list):
     count = 0

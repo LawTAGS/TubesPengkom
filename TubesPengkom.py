@@ -74,7 +74,7 @@ while (program_berjalan == True):
     if (opsiMenu == 2):
         if adaData(arrData):
             jenis_data_yang_dicari = input("\nData yang tersedia\n1. Nama \n2. NIM \nJenis data apa yang ingin anda cari? ").lower().replace(' ', '')
-            if jenis_data_yang_dicari.startswith('1'):
+            if startswith(jenis_data_yang_dicari, '1'):
                 data_ketemu = False
                 data_yang_dicari = input("\nMasukkan nama yang ingin dicari: ")
                 for data_pengguna in arrData:
@@ -87,7 +87,7 @@ while (program_berjalan == True):
                 if data_ketemu == False:
                     print("Data tidak ditemukan.")
 
-            elif jenis_data_yang_dicari.startswith('2'):
+            elif startswith(jenis_data_yang_dicari, '2'):
                 data_ketemu = False
                 data_yang_dicari = input("\nMasukkan NIM yang ingin dicari: ")
                 for data_pengguna in arrData:
@@ -111,7 +111,7 @@ while (program_berjalan == True):
 
     if (opsiMenu == 4):
         prompt = input("Anda yakin ingin keluar dari program ini?\n")
-        if prompt.startswith('y'):
+        if startswith(prompt, 'y'):
             program_berjalan = False
         else:
             program_berjalan = True

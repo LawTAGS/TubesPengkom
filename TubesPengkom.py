@@ -26,6 +26,26 @@ from fungsi_dasar import * # Import fungsi dasar buatan sendiri, dari file fungs
 
 #     return arrData
 
+# Test searching
+def searchingData(keyword, nameArray, searchCode):
+    keyFound = False
+    for i in range(len(nameArray)):
+        arrNama = nameArray
+        correctCount =  0
+        for chrKeyword in keyword:
+            for chrName in arrNama[i][searchCode]:
+                if chrKeyword.upper() == chrName.upper():
+                    arrNama[i][searchCode] = arrNama[i][searchCode].remove(chrKeyword)
+                    correctCount += 1
+                    print(arrNama[i])
+
+            if correctCount == len(keyword):
+                print(nameArray[i])
+                keyFound = True
+                break
+        
+    return keyFound
+
 def login(username_user, password_user, user_lists):
     username_salah = True
     password_salah = True
@@ -219,30 +239,48 @@ while (program_berjalan == True):
                 if adaData(arrData):
                     jenis_data_yang_dicari = input("\nPencarian dapat dilakukan berdasarkan: \n1. Nama \n2. NIM \n3. Tampilkan semua \nPilihan menu: ")
                     if startswith(jenis_data_yang_dicari, '1'):
-                        data_ketemu = False
+                        # data_ketemu = False
                         data_yang_dicari = input("\nMasukkan nama yang ingin dicari: ")
-                        for data_pengguna in arrData:
-                            if data_pengguna[0] == data_yang_dicari and data_pengguna[5] == no_kk_user:
-                                data_ketemu = True
-                                outputData(data_pengguna)
-                                print('===============================================')
-                                input("Tekan sembarang tombol untuk melanjutkan.")
-                        if data_ketemu == False:
+                        # for data_pengguna in arrData:
+                        #     if data_pengguna[0] == data_yang_dicari and data_pengguna[5] == no_kk_user:
+                        #         data_ketemu = True
+                        #         outputData(data_pengguna)
+                        #         print('===============================================')
+                        #         input("Tekan sembarang tombol untuk melanjutkan.")
+                        # if data_ketemu == False:
+                        #     print("Data tidak ditemukan.")
+
+
+                        hasil = searchingData(data_yang_dicari, arrData, searchCode = 0)
+                        # kodePencariannya yang 1. Nama, 2. NIM, jadi kalau dipilih 1 ak cukup ngecek dari indeks ke 0 aja
+                        if hasil:
+                            hasil
+
+                        elif not hasil:
                             print("Data tidak ditemukan.")
+
 
                     elif startswith(jenis_data_yang_dicari, '2'):
                         data_ketemu = False
                         data_yang_dicari = input("\nMasukkan NIM yang ingin dicari: ")
-                        for data_pengguna in arrData:
-                            if data_pengguna[1] == data_yang_dicari and data_pengguna[5] == no_kk_user:
-                                data_ketemu = True
-                                outputData(data_pengguna)
-                                print('===============================================')
-                                input("Tekan sembarang tombol untuk melanjutkan.")
-                            else:
-                                pass
-                        if data_ketemu == False:
-                            print("\nData tidak ditemukan.\n")
+                        # for data_pengguna in arrData:
+                        #     if data_pengguna[1] == data_yang_dicari and data_pengguna[5] == no_kk_user:
+                        #         data_ketemu = True
+                        #         outputData(data_pengguna)
+                        #         print('===============================================')
+                        #         input("Tekan sembarang tombol untuk melanjutkan.")
+                        #     else:
+                        #         pass
+                        # if data_ketemu == False:
+                        #     print("\nData tidak ditemukan.\n")
+
+                        hasil = searchingData(data_yang_dicari, arrData, searchCode = 1)
+                        
+                        if hasil:
+                            hasil
+
+                        elif not hasil:
+                            print("Data tidak ditemukan.")
 
                     elif startswith(jenis_data_yang_dicari, '3'):
                         data_ketemu = False

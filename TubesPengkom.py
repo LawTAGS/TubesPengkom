@@ -376,6 +376,7 @@ while (program_berjalan == True):
                         if arrData[index][5] == no_kk_user:
                             available_names.append([arrData[index], index])
                             print('%d. %s' % (i, arrData[index][0]))
+                            i += 1
                     
                     valid_choice = False
                     while not valid_choice:

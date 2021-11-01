@@ -271,9 +271,9 @@ while (program_berjalan == True):
                     clear()
                     nama = input("\nMasukkan nama: ")
                     nim = input("Masukkan NIM: ")
-                    status = int(input("\nKeterangan: \n0: Belum vaksin \n1: vaksin pertama \n2: vaksin kedua \nMasukkan status vaksin: "))
                     nik = input("\nMasukkan nomor induk kependudukan anda: ")
                     no_kk = no_kk_user
+                    status = int(input("\nKeterangan: \n0: Belum vaksin \n1: vaksin pertama \n2: vaksin kedua \nMasukkan status vaksin: "))
                     riwayat_check_in = []
 
                     if status != 0:
@@ -358,6 +358,7 @@ while (program_berjalan == True):
                         data_ketemu = False
                         for data_pengguna in arrData:
                             if data_pengguna[5] == no_kk_user:
+                                clear()
                                 outputData(data_pengguna)
                                 print('===============================================')
                                 input("Tekan sembarang tombol untuk melanjutkan.")

@@ -879,13 +879,13 @@
    'C:\\Users\\Afief '
    'Abdurrahman\\AppData\\Local\\Programs\\Python\\Python310\\lib\\multiprocessing\\__init__.py',
    'PYMODULE'),
-  ('_py_abc',
-   'C:\\Users\\Afief '
-   'Abdurrahman\\AppData\\Local\\Programs\\Python\\Python310\\lib\\_py_abc.py',
-   'PYMODULE'),
   ('stringprep',
    'C:\\Users\\Afief '
    'Abdurrahman\\AppData\\Local\\Programs\\Python\\Python310\\lib\\stringprep.py',
+   'PYMODULE'),
+  ('_py_abc',
+   'C:\\Users\\Afief '
+   'Abdurrahman\\AppData\\Local\\Programs\\Python\\Python310\\lib\\_py_abc.py',
    'PYMODULE'),
   ('tracemalloc',
    'C:\\Users\\Afief '
